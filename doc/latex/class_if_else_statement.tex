@@ -1,0 +1,38 @@
+\hypertarget{class_if_else_statement}{}\section{If\+Else\+Statement Class Reference}
+\label{class_if_else_statement}\index{If\+Else\+Statement@{If\+Else\+Statement}}
+Inheritance diagram for If\+Else\+Statement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_if_else_statement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_if_else_statement_a1838077ebc90cfc5309fe0e2acad5d16}\label{class_if_else_statement_a1838077ebc90cfc5309fe0e2acad5d16}} 
+{\bfseries If\+Else\+Statement} (const \hyperlink{class_expression}{Expression} $\ast$cond\+\_\+in, \hyperlink{class_statement}{Statement} $\ast$true\+\_\+in, \hyperlink{class_statement}{Statement} $\ast$false\+\_\+in)
+\item 
+\mbox{\Hypertarget{class_if_else_statement_accdfdb47988512747590e9e59e02ebb4}\label{class_if_else_statement_accdfdb47988512747590e9e59e02ebb4}} 
+void {\bfseries print} () const override
+\item 
+\mbox{\Hypertarget{class_if_else_statement_aac0dfb69c60bcb532e09030ef500ad0b}\label{class_if_else_statement_aac0dfb69c60bcb532e09030ef500ad0b}} 
+void {\bfseries compile} (\hyperlink{class_context}{Context} \&ctxt, unsigned int dest\+Loc) const override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_if_else_statement_ae31ae98cb2f7bc9b17c9507419c61d50}\label{class_if_else_statement_ae31ae98cb2f7bc9b17c9507419c61d50}} 
+const \hyperlink{class_expression}{Expression} $\ast$ {\bfseries condition}
+\item 
+\mbox{\Hypertarget{class_if_else_statement_aa9a6d5394f839da525496c910f9db3f1}\label{class_if_else_statement_aa9a6d5394f839da525496c910f9db3f1}} 
+\hyperlink{class_statement}{Statement} $\ast$ {\bfseries trueclause}
+\item 
+\mbox{\Hypertarget{class_if_else_statement_ae8181ea8b743060a7e3477e98485f91c}\label{class_if_else_statement_ae8181ea8b743060a7e3477e98485f91c}} 
+\hyperlink{class_statement}{Statement} $\ast$ {\bfseries falseclause}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ast.\+hpp\item 
+ast.\+cpp\end{DoxyCompactItemize}

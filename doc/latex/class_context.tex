@@ -1,0 +1,107 @@
+\hypertarget{class_context}{}\section{Context Class Reference}
+\label{class_context}\index{Context@{Context}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_context_a4fb0726e937fa0ddf829c408f2941ca2}\label{class_context_a4fb0726e937fa0ddf829c408f2941ca2}} 
+{\bfseries Context} (\hyperlink{class_context}{Context} $\ast$c)
+\item 
+\mbox{\Hypertarget{class_context_ad326b2096ae2369d8188eb176d988b70}\label{class_context_ad326b2096ae2369d8188eb176d988b70}} 
+std\+::vector$<$ unsigned int $>$ {\bfseries free\+Saved\+Registers} ()
+\item 
+\mbox{\Hypertarget{class_context_a2a30d44799ac4a9339aa6927b3d56670}\label{class_context_a2a30d44799ac4a9339aa6927b3d56670}} 
+std\+::vector$<$ unsigned int $>$ {\bfseries free\+Tmp\+Registers} ()
+\item 
+\mbox{\Hypertarget{class_context_a13d9bba210a7318e7802d6264ca60eb8}\label{class_context_a13d9bba210a7318e7802d6264ca60eb8}} 
+void {\bfseries set\+Used} (unsigned int i)
+\item 
+\mbox{\Hypertarget{class_context_a1adf3153b961a2eaebf4e8b2e3cbd8bf}\label{class_context_a1adf3153b961a2eaebf4e8b2e3cbd8bf}} 
+void {\bfseries set\+Unused} (unsigned int i)
+\item 
+\mbox{\Hypertarget{class_context_a8dbea6df459519700ec75964690475eb}\label{class_context_a8dbea6df459519700ec75964690475eb}} 
+void {\bfseries add\+Global} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_a2cd8e7b3ee3343f4a0df1f7e0594af0e}\label{class_context_a2cd8e7b3ee3343f4a0df1f7e0594af0e}} 
+void {\bfseries delete\+Global} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_afee1a24074cc55823b8cf516b0c006de}\label{class_context_afee1a24074cc55823b8cf516b0c006de}} 
+unsigned int {\bfseries find\+Global} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_a4392e063038524f16ded5a4727da86ac}\label{class_context_a4392e063038524f16ded5a4727da86ac}} 
+bool {\bfseries is\+Global} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_add5876bef48e55fb6678b1fa66847c02}\label{class_context_add5876bef48e55fb6678b1fa66847c02}} 
+void {\bfseries add\+Variable} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_a1807ed5838267e41a8fd6a2f9746eb5d}\label{class_context_a1807ed5838267e41a8fd6a2f9746eb5d}} 
+void {\bfseries delete\+Variable} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_af0ca1f256d8e85df2776d98641645f6d}\label{class_context_af0ca1f256d8e85df2776d98641645f6d}} 
+unsigned int {\bfseries find\+Variable} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_a3be2ed1410be651593ab477b452b6a74}\label{class_context_a3be2ed1410be651593ab477b452b6a74}} 
+bool {\bfseries is\+Variable} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_a01f91258841aeecffd6d89b243f75dc2}\label{class_context_a01f91258841aeecffd6d89b243f75dc2}} 
+void {\bfseries add\+Dynamic} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_a9bb1b3c01ebbf9f5324f1b52f9c000c6}\label{class_context_a9bb1b3c01ebbf9f5324f1b52f9c000c6}} 
+void {\bfseries delete\+Dynamic} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_abbdfcbf82bca5d5d4bb893323be65f39}\label{class_context_abbdfcbf82bca5d5d4bb893323be65f39}} 
+unsigned int {\bfseries find\+Dynamic} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_ae7b29425bad6cdd9c653ab4d42835393}\label{class_context_ae7b29425bad6cdd9c653ab4d42835393}} 
+bool {\bfseries is\+Dynamic} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_a8dcc97f8f696b8f42bb554658decc369}\label{class_context_a8dcc97f8f696b8f42bb554658decc369}} 
+bool {\bfseries is\+On\+Stack} (const std\+::string $\ast$name)
+\item 
+\mbox{\Hypertarget{class_context_a06f900b507c9013b789c945060bdb684}\label{class_context_a06f900b507c9013b789c945060bdb684}} 
+std\+::string {\bfseries find\+On\+Stack} (const std\+::string $\ast$name)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_context_a4154d80f029cc2e348126ca70dd43e94}\label{class_context_a4154d80f029cc2e348126ca70dd43e94}} 
+bool {\bfseries regs} \mbox{[}32\mbox{]}
+\item 
+\mbox{\Hypertarget{class_context_ac383af2b2294500f1cc0370946df81a6}\label{class_context_ac383af2b2294500f1cc0370946df81a6}} 
+unsigned int {\bfseries SP}
+\item 
+\mbox{\Hypertarget{class_context_a9f5e2ccd0d0d14543080829ebf2d4b5b}\label{class_context_a9f5e2ccd0d0d14543080829ebf2d4b5b}} 
+unsigned int {\bfseries fsize\+\_\+org}
+\item 
+\mbox{\Hypertarget{class_context_a3572ac8a19d4afe52f93236158b3ca6b}\label{class_context_a3572ac8a19d4afe52f93236158b3ca6b}} 
+unsigned int {\bfseries fsize}
+\item 
+\mbox{\Hypertarget{class_context_aac2957f7942a067a4d61db0a9d5fa52b}\label{class_context_aac2957f7942a067a4d61db0a9d5fa52b}} 
+int {\bfseries param\+No}
+\item 
+\mbox{\Hypertarget{class_context_a21e93552ced87fbc90e95fb1adefb4d1}\label{class_context_a21e93552ced87fbc90e95fb1adefb4d1}} 
+int {\bfseries var\+No}
+\item 
+\mbox{\Hypertarget{class_context_a1eca674dabc9aacc22cb0b570fcebd46}\label{class_context_a1eca674dabc9aacc22cb0b570fcebd46}} 
+int {\bfseries globl\+Var}
+\item 
+\mbox{\Hypertarget{class_context_a457cedbb97192ceee110548e3b8c0348}\label{class_context_a457cedbb97192ceee110548e3b8c0348}} 
+int {\bfseries args\+No}
+\item 
+\mbox{\Hypertarget{class_context_a789582cf84432865fc58b566c93f79bb}\label{class_context_a789582cf84432865fc58b566c93f79bb}} 
+int {\bfseries saved\+No}
+\item 
+\mbox{\Hypertarget{class_context_af2d41b56e6c75c534ea01e9f9cc7b8de}\label{class_context_af2d41b56e6c75c534ea01e9f9cc7b8de}} 
+std\+::unordered\+\_\+map$<$ std\+::string, unsigned int $>$ {\bfseries variable\+Bindings}
+\item 
+\mbox{\Hypertarget{class_context_a7cd52a34969792c3d414a9d2fb347d79}\label{class_context_a7cd52a34969792c3d414a9d2fb347d79}} 
+std\+::unordered\+\_\+map$<$ std\+::string, unsigned int $>$ {\bfseries dynamic\+Bindings}
+\item 
+\mbox{\Hypertarget{class_context_ab55f4a83656b1385d548507cfaa5e9f4}\label{class_context_ab55f4a83656b1385d548507cfaa5e9f4}} 
+std\+::unordered\+\_\+map$<$ std\+::string, unsigned int $>$ {\bfseries global\+Bindings}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+context.\+hpp\item 
+context.\+cpp\end{DoxyCompactItemize}

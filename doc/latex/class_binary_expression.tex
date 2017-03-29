@@ -1,0 +1,38 @@
+\hypertarget{class_binary_expression}{}\section{Binary\+Expression Class Reference}
+\label{class_binary_expression}\index{Binary\+Expression@{Binary\+Expression}}
+Inheritance diagram for Binary\+Expression\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_binary_expression}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_binary_expression_a778ec407f2742ef33c7fe443dd8cb9bb}\label{class_binary_expression_a778ec407f2742ef33c7fe443dd8cb9bb}} 
+{\bfseries Binary\+Expression} (const \hyperlink{class_expression}{Expression} $\ast$left\+\_\+in, const std\+::string $\ast$op\+\_\+in, const \hyperlink{class_expression}{Expression} $\ast$right\+\_\+in)
+\item 
+\mbox{\Hypertarget{class_binary_expression_a3083960e3d1f7fe0015f906f20d256e9}\label{class_binary_expression_a3083960e3d1f7fe0015f906f20d256e9}} 
+void {\bfseries print} () const override
+\item 
+\mbox{\Hypertarget{class_binary_expression_a1eaca730f7a3fa6ff8153b23f72eb961}\label{class_binary_expression_a1eaca730f7a3fa6ff8153b23f72eb961}} 
+void {\bfseries compile} (\hyperlink{class_context}{Context} \&ctxt, unsigned int dest\+Loc) const override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_binary_expression_a9a5f3daa86c05eace97b8ab081a29544}\label{class_binary_expression_a9a5f3daa86c05eace97b8ab081a29544}} 
+const \hyperlink{class_expression}{Expression} $\ast$ {\bfseries left}
+\item 
+\mbox{\Hypertarget{class_binary_expression_a1124bcd93d45cc8a2639cb1b662ad027}\label{class_binary_expression_a1124bcd93d45cc8a2639cb1b662ad027}} 
+const \hyperlink{class_expression}{Expression} $\ast$ {\bfseries right}
+\item 
+\mbox{\Hypertarget{class_binary_expression_a085e8e782d1370dc7c0a1ae4625654b9}\label{class_binary_expression_a085e8e782d1370dc7c0a1ae4625654b9}} 
+const std\+::string $\ast$ {\bfseries op}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ast.\+hpp\item 
+ast.\+cpp\end{DoxyCompactItemize}

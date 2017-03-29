@@ -1,0 +1,12 @@
+.vagrant
+ubuntu-xenial-16.04-cloudimg-console.log
+src/*.[oa]
+src/*.tab.*
+src/parser.output
+src/lexer.yy.*
+test/*.[oa]
+src/old/*
+main.s
+test.s
+a.out
+working/*

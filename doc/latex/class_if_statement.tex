@@ -1,0 +1,35 @@
+\hypertarget{class_if_statement}{}\section{If\+Statement Class Reference}
+\label{class_if_statement}\index{If\+Statement@{If\+Statement}}
+Inheritance diagram for If\+Statement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_if_statement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_if_statement_acd21e3b7cf623247ddc4926ab342a92e}\label{class_if_statement_acd21e3b7cf623247ddc4926ab342a92e}} 
+{\bfseries If\+Statement} (const \hyperlink{class_expression}{Expression} $\ast$cond\+\_\+in, \hyperlink{class_statement}{Statement} $\ast$true\+\_\+in)
+\item 
+\mbox{\Hypertarget{class_if_statement_a25238ee0d79d96c1c28a18cf8cd45396}\label{class_if_statement_a25238ee0d79d96c1c28a18cf8cd45396}} 
+void {\bfseries print} () const override
+\item 
+\mbox{\Hypertarget{class_if_statement_ac9134843bef45dd40db3cf1f5a282923}\label{class_if_statement_ac9134843bef45dd40db3cf1f5a282923}} 
+void {\bfseries compile} (\hyperlink{class_context}{Context} \&ctxt, unsigned int dest\+Loc) const override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_if_statement_a67ece738b44b6d4abd5919193147872c}\label{class_if_statement_a67ece738b44b6d4abd5919193147872c}} 
+const \hyperlink{class_expression}{Expression} $\ast$ {\bfseries condition}
+\item 
+\mbox{\Hypertarget{class_if_statement_a8c21d800142cba3f2845f19b47f51c67}\label{class_if_statement_a8c21d800142cba3f2845f19b47f51c67}} 
+\hyperlink{class_statement}{Statement} $\ast$ {\bfseries trueclause}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ast.\+hpp\item 
+ast.\+cpp\end{DoxyCompactItemize}

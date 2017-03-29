@@ -1,0 +1,41 @@
+\hypertarget{class_for_statement}{}\section{For\+Statement Class Reference}
+\label{class_for_statement}\index{For\+Statement@{For\+Statement}}
+Inheritance diagram for For\+Statement\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_for_statement}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_for_statement_ae97d7b04d1286c2526afea1334ed3b5c}\label{class_for_statement_ae97d7b04d1286c2526afea1334ed3b5c}} 
+{\bfseries For\+Statement} (const \hyperlink{class_statement}{Statement} $\ast$init\+\_\+in, const \hyperlink{class_statement}{Statement} $\ast$cond\+\_\+in, const \hyperlink{class_statement}{Statement} $\ast$step\+\_\+in, \hyperlink{class_scope}{Scope} $\ast$body\+\_\+in)
+\item 
+\mbox{\Hypertarget{class_for_statement_a4cd6e716523339630163e9ed6a40d871}\label{class_for_statement_a4cd6e716523339630163e9ed6a40d871}} 
+void {\bfseries print} () const override
+\item 
+\mbox{\Hypertarget{class_for_statement_affb13212c8806cf22daf04881f488511}\label{class_for_statement_affb13212c8806cf22daf04881f488511}} 
+void {\bfseries compile} (\hyperlink{class_context}{Context} \&ctxt, unsigned int dest\+Loc) const override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_for_statement_ac9e5f93a508f56a77e69c4245333f0ae}\label{class_for_statement_ac9e5f93a508f56a77e69c4245333f0ae}} 
+const \hyperlink{class_statement}{Statement} $\ast$ {\bfseries init}
+\item 
+\mbox{\Hypertarget{class_for_statement_ac5ec9bf9fee699436e8e41548e83855c}\label{class_for_statement_ac5ec9bf9fee699436e8e41548e83855c}} 
+const \hyperlink{class_statement}{Statement} $\ast$ {\bfseries condition}
+\item 
+\mbox{\Hypertarget{class_for_statement_abf5f0ce2b90c9420eee55e14ec8edec5}\label{class_for_statement_abf5f0ce2b90c9420eee55e14ec8edec5}} 
+const \hyperlink{class_statement}{Statement} $\ast$ {\bfseries step}
+\item 
+\mbox{\Hypertarget{class_for_statement_a5f9a886aa5ce770c6d5ecb0df1d7b191}\label{class_for_statement_a5f9a886aa5ce770c6d5ecb0df1d7b191}} 
+\hyperlink{class_scope}{Scope} $\ast$ {\bfseries body}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+ast.\+hpp\item 
+ast.\+cpp\end{DoxyCompactItemize}
