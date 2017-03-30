@@ -1,9 +1,5 @@
-int z;
-int a;
+int x = 10;
 
 int main() {
-	
-	int y = z;
-	
-	return y;
+	return x;
 }

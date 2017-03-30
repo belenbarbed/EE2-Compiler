@@ -239,8 +239,8 @@ std::string Context::findOnStack(const std::string *name) {
 		
 	} else if (this->isGlobal(name)) {
 		// it's a global variable
-		
-		return "isglobal()";
+		//return *name + "($gp)";
+		return "%got(" + *name + ")($28)";
 		
 	}
 	

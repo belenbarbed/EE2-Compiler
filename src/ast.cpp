@@ -745,7 +745,22 @@ void VarDec::compile(Context & ctxt, unsigned int destLoc) const {
 	if(destLoc == 99) {
 		// is a global variable
 		globalVars.push_back(id);
+		
+		cout << "    .globl	" << *id << endl;
+		cout << "    .data" << endl;
+		cout << "    .align	2" << endl;
+		cout << "    .type	" <<* id << ", @object" << endl;
+		cout << "    .size	" << *id << ", 4" << endl;
+		cout << *id << ":" << endl;
+		cout << "    .word	10" << endl;				// TODO: calculate
+		
+		/*
+		if(globalVars.size() == 0) {
+			cout << "    .data" << endl;
+		}
+		globalVars.push_back(id);
 		cout << "    .comm       " << *id << ", 4, 4" << endl;
+		*/
 		
 	} else {
 		// is not a global variable
@@ -958,7 +973,6 @@ void FunDec::compile(Context & ctxt, unsigned int destLoc) const {
 	// DETERMINING FRAME SIZE (in words)
 	ctxt.fsize = 0;
 	ctxt.fsize = ctxt.fsize + 1;				// save old $fp
-	ctxt.fsize = ctxt.fsize + ctxt.globlVar;	// no of global variables in scope
 	ctxt.fsize = ctxt.fsize + ctxt.varNo; 		// no of variables declared in this subroutine
 	ctxt.fsize = ctxt.fsize + ctxt.paramNo; 	// parameters taken in by subroutine (saved as variables)
 	ctxt.fsize = ctxt.fsize + 8;				// 8 registers to preserve accross subroutine calls
@@ -1006,11 +1020,18 @@ void FunDec::compile(Context & ctxt, unsigned int destLoc) const {
 		cout << "    sw          $s" << i << ", " << 4*(ctxt.argsNo+i) << "($sp)" << endl;
 	}
 	
-	// declare global vars
-	for(unsigned int i = 0; i < globalVars.size(); i++) {
-		ctxt.addVariable(globalVars[i]);
-	}
+	// set up $gp for global variables
+	//cout << "    lui         $28,%hi(__gnu_local_gp)" << endl;
+	//cout << "    addiu       $28,$28,%lo(__gnu_local_gp)" << endl;
 	
+	// declare global vars
+	for(int i = 0; i < ctxt.globlVar; i++) {
+		//ctxt.addGlobal(globalVars[i]);
+		ctxt.addVariable(globalVars[i]);
+		cout << "    lui         $16, %hi(" << *globalVars[i] << ")" << endl;
+		cout << "    lw          $16, %lo(" << *globalVars[i] << ")($16)" << endl;
+		cout << "    sw          $16, " << ctxt.findOnStack(globalVars[i]) << endl;
+	}
 	
 	// declare parameters as avilable variables & save value on stack
 	if(ctxt.paramNo < 4) {
@@ -1037,6 +1058,11 @@ void FunDec::compile(Context & ctxt, unsigned int destLoc) const {
 	// compile statements
 	if(body->stats != NULL) {
 		body->stats->compile(ctxt, 2);
+	}
+	
+	// delete global variables from context
+	for(int i = 0; i < ctxt.globlVar; i++) {
+		ctxt.deleteGlobal(globalVars[i]);
 	}
 	
 	// delete parameters from context
